@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const posts = {};
+const posts: {[index: string]: any} = {};
 
 app.get('/posts', (req, res) => {
     res.send(posts);
