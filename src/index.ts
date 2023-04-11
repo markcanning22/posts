@@ -22,7 +22,7 @@ app.post('/posts', async (req: Request, res: Response): Promise<void> => {
         id, title
     };
 
-    await axios.post('http://event-bus-clusterip-srv:4005/events', {
+    await axios.post('http://event-bus-srv:4005/events', {
         type: 'PostCreated',
         data: {
             id,
